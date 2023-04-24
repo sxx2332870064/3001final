@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Snake Game</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/p5.js"></script>
+    
+        <script>
+      // check if headImage and bodyImage have been set in local storage
+      if (!localStorage.getItem("headImage") || !localStorage.getItem("bodyImage")) {
+        // if not, redirect to the start page
+        window.location.href = "home.html";
+      }
+    </script>
+    
+    <script src="sketch.js"></script>
+    
+    
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+      }
+      canvas {
+        display: block;
+      }
+
+      .return-button {
+        position: absolute;
+        bottom: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 16px;
+        padding: 10px 20px;
+        background-color: white;
+        border: 2px solid black;
+        border-radius: 10px;
+        cursor: pointer;
+      }
+    </style>
+
+  </head>
+  <body>
+    <main></main>
+    
+    <button class="return-button" onclick="location.href='home.html'">
+      Return to Start Page
+    </button>
+
+    
+  </body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Snake Game - Skin Selection</title>
+    <style>
+      body {
+  margin: 0;
+  padding: 0;
+  background-image: url("image222.png");
+  background-size: 650px 650px; /* add this line */
+}
+      .button-container {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin-bottom: 20px;
+        text-align: center;
+      }
+      button {
+        font-size: 16px;
+        padding: 10px 20px;
+        margin: 0 10px;
+        background-color: white;
+        border: 2px solid black;
+        border-radius: 10px;
+        cursor: pointer;
+        width: 120px;
+        height: 50px;
+      }
+      .button-text {
+        display: inline-block;
+        margin-top: 10px;
+      }
+      #return-button {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 16px;
+        padding: 10px 20px;
+        margin-bottom: 20px;
+        background-color: white;
+        border: 2px solid black;
+        border-radius: 10px;
+        cursor: pointer;
+        width: 120px;
+        height: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="button-container">
+      <button onclick="startGame('image1.png', 'image2.png')"><div class="button-text">Flower</div></button>
+      <button onclick="startGame('image3.png', 'image4.png')"><div class="button-text">Rainbow</div></button>
+      <button onclick="startGame('image5.png', 'image6.png')"><div class="button-text">Chocolate</div></button>
+      <button onclick="startGame('image7.png', 'image8.png')"><div class="button-text">Bubbles</div></button>
+    </div>
+    
+    <button id="return-button" onclick="location.href='home.html'">Return to Start</button>
+
+    <script>
+      function startGame(headImage, bodyImage) {
+        localStorage.setItem("headImage", headImage);
+        localStorage.setItem("bodyImage", bodyImage);
+        window.location.href = "game.html";
+      }
+    </script>
+  </body>
+</html>

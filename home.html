@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Snake Game</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/p5.js"></script>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+      }
+      canvas {
+        display: block;
+      }
+
+      .start-page {
+  background-image: url("image111.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  height: 650px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+      .start-button {
+        font-size: 24px;
+        padding: 12px 24px;
+        background-color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="start-page">
+      <button class="start-button" onclick="location.href='selection.html'">
+        Start Game
+      </button>
+    </div>
+  </body>
+</html>
